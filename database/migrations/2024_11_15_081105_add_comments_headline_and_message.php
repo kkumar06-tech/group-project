@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('comments', function (Blueprint $table) {
-            //
+            $table->string('headline',100);
+            $table->text('message');
         });
     }
 
@@ -22,7 +23,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('comments', function (Blueprint $table) {
-            //
-        });
+            // Drop the 'headline' and 'message' columns if they exist
+            $table->dropColumn(['headline', 'message']);
+});
     }
+
 };
