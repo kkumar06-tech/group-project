@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('foods', function (Blueprint $table) {
-            $table->unsignedBigInteger('food_id')->unique();
+          
             $table->string('food_name');
             
             $table->string('calories_per_100g');
@@ -29,7 +29,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('foods', function (Blueprint $table) {
-            $table->dropColumn(['food_id','food_name','calories_per_100g','protein_per_100g','carbs_per_100g','fats_per_100g']);
+            $table->dropColumn(['food_name','calories_per_100g','protein_per_100g','carbs_per_100g','fats_per_100g']);
 
         });
     }

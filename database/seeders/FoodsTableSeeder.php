@@ -13,7 +13,7 @@ class FoodsTableSeeder extends Seeder
     public function run(): void
     {
         Foods::create( [ 
-            'food_id'=>1,
+        
             'food_name'=>'apple',
             'calories_per_100g'=> ('61.00'),
             'protein_per_100g'=>'0.13',
@@ -24,7 +24,7 @@ class FoodsTableSeeder extends Seeder
 
 
             Foods::create( [ 
-                'food_id'=>2,
+                
                 'food_name'=>'banana',
                 'calories_per_100g'=> ('85.00'),
                 'protein_per_100g'=>'0.73',
@@ -33,7 +33,7 @@ class FoodsTableSeeder extends Seeder
     
                 ] );
                 Foods::create( [ 
-                    'food_id'=>3,
+                    
                     'food_name'=>'avocado',
                     'calories_per_100g'=> ('223.00'),
                     'protein_per_100g'=>'1.82',
@@ -43,7 +43,7 @@ class FoodsTableSeeder extends Seeder
                     ] );
 
                     Foods::create( [ 
-                        'food_id'=>4,
+                        
                         'food_name'=>'chickpeas',
                         'calories_per_100g'=> ('383.23'),
                         'protein_per_100g'=>'21.30',
@@ -54,7 +54,7 @@ class FoodsTableSeeder extends Seeder
 
 
                         Foods::create( [ 
-                            'food_id'=>5,
+                            
                             'food_name'=>'beef',
                             'calories_per_100g'=> ('233.00'),
                             'protein_per_100g'=>'18.40',
@@ -65,7 +65,7 @@ class FoodsTableSeeder extends Seeder
 
 
                             Foods::create( [ 
-                                'food_id'=>6,
+                                
                                 'food_name'=>'chicken',
                                 'calories_per_100g'=> ('107.37'),
                                 'protein_per_100g'=>'22.50',
@@ -77,7 +77,7 @@ class FoodsTableSeeder extends Seeder
 
 
                                 Foods::create( [ 
-                                    'food_id'=>7,
+                                    
                                     'food_name'=>'egg',
                                     'calories_per_100g'=> ('44.80'),
                                     'protein_per_100g'=>'10.10',
