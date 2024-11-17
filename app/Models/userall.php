@@ -29,7 +29,10 @@ class userall extends Model
         return $this->hasMany(Foodlogs::class, 'user_id');
     }
     
-   
+    public function waterlogs()
+    {
+        return $this->hasMany(Waterlogs::class, 'user_id');
+    }
 
 
 }
