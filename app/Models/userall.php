@@ -12,4 +12,11 @@ class userall extends Model
         'password',
         'role',
     ];
+
+
+    public function regusers()
+    {
+        return $this->hasOne(Regusers::class, 'user_id');
+    }
+
 }
