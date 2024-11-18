@@ -16,14 +16,14 @@ class UserallTableSeeder extends Seeder
             'name'=>'keshav',
             'email'=>'kk12@gmial.com',
             'password'=>'j3ne9j',
-            'role'=>'normaluser'
+            'role'=>'user'
             ] ); 
 
             userall::create( [ 
                 'name'=>'anshu',
                 'email'=>'anshu12@gmial.com',
                 'password'=> bcrypt('sdw212wse9j'),
-                'role'=>'normaluser'
+                'role'=>'Guest'
                 ] ); 
 
                 userall::create( [ 

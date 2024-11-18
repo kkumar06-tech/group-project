@@ -19,6 +19,11 @@ class userall extends Model
         return $this->hasOne(Regusers::class, 'user_id');
     }
 
+    public function nutritionists()
+    {
+        return $this->hasOne(Nutritionists::class, 'user_id');
+    }
+
     public function dailycounts()
     {
         return $this->hasOne(Dailycounts::class, 'user_id');

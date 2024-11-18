@@ -4,17 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Regusers extends Model
+class Nutritionists extends Model
 {
     protected $fillable = [
         'user_id',
-        'gender',
-        'age',
-        'height',
-        'weight',
-        'goal',
-        'exer_type'
+        'certifications',
+        'experience',
+        'bio'
     ];
+
 
     public function userall()
     {
@@ -23,7 +21,6 @@ class Regusers extends Model
 
     public function appointments()
     {
-        return $this->hasMany(Appointments::class, 'regusers_id');
+        return $this->hasMany(Appointments::class, 'nutritionists_id');
     }
-
 }
