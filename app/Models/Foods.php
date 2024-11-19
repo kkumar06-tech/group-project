@@ -10,7 +10,7 @@ class Foods extends Model
 
     public function foodlogs()
     {
-        return $this->hasMany(Foodlogs::class,'food_id');
+        return $this->belongsToMany(Foodlogs::class,'food_foodlog');
     }
 
 }

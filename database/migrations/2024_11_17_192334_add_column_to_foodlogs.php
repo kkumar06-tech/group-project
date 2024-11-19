@@ -12,10 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('foodlogs', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id')->unique();
-            $table->unsignedBigInteger('food_id')->unique();
+            $table->unsignedBigInteger('user_id');
           $table->foreign('user_id')->references('id')->on('useralls')->onDelete('cascade');
-          $table->foreign('food_id')->references('id')->on('foods')->onDelete('cascade');
           $table->decimal('quantity',5,2); 
           $table->date('date')->default(DB::raw('CURRENT_DATE'));
            
@@ -28,9 +26,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('foodlogs', function (Blueprint $table) {
+          
             $table->dropForeign(['user_id']);
-            $table->dropForeign(['food_id']);
-            $table->dropColumn(['user_id','food_id','quantity','date']);
+            $table->dropColumn(['user_id','quantity','date']);
         });
     }
 };

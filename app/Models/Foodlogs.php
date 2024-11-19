@@ -16,7 +16,12 @@ class Foodlogs extends Model
 
     public function foods()
     {
-        return $this->belongsTo(Foods::class,'id');
+        return $this->belongsToMany(Foods::class,'food_foodlog');
+    }
+
+    public function userall()
+    {
+        return $this->belongsTo(Alluser::class, 'id');
     }
 
 }
