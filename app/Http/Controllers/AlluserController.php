@@ -24,6 +24,8 @@ class AlluserController extends Controller
         /*  $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string',
+            'password'  => 'required|string',
+            'role' => 'required|string',
         ]);*/
 
         $user = userall::create($request->all());
@@ -53,7 +55,7 @@ class AlluserController extends Controller
         $user = userall::find($id);
 
         if (!$user) {
-            return response()->json(['message' => 'Article not found'], 404);
+            return response()->json(['message' => 'User not found'], 404);
         }
 
         /*$validated = $request->validate([
@@ -75,7 +77,7 @@ class AlluserController extends Controller
         $user = userall::find($id);
 
         if (!$user) {
-            return response()->json(['message' => 'Article not found'], 404);
+            return response()->json(['message' => 'User not found'], 404);
         }
 
         $user->delete();
